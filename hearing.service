@@ -1,0 +1,13 @@
+[Unit]
+Description=Hearing Assist
+After=sound.target
+
+[Service]
+User=oein
+WorkingDirectory=/home/oein/Documents/test
+ExecStart=/usr/bin/python3 /home/oein/Documents/test/realtime_hearing_assist.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
